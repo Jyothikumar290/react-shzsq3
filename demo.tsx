@@ -72,7 +72,7 @@ export default function SimpleAccordion() {
         <AccordionDetails>
           <Typography style={{ textAlign: "center" }}>
             <select onChange={handleChange}>
-              <option value="select">Select</option>
+              <option value="">Select</option>
               <option value="Mca">MCA</option>
               <option value="Degree">Degree</option>
               <option value="Btech">BTech</option>
