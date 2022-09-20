@@ -1,25 +1,25 @@
-import * as React from "react";
-import Accordion from "@mui/material/Accordion";
-import AccordionSummary from "@mui/material/AccordionSummary";
-import AccordionDetails from "@mui/material/AccordionDetails";
-import Typography from "@mui/material/Typography";
-import ExpandMoreIcon from "@mui/icons-material/ExpandMore";
-import { useState } from "react";
+import * as React from 'react';
+import Accordion from '@mui/material/Accordion';
+import AccordionSummary from '@mui/material/AccordionSummary';
+import AccordionDetails from '@mui/material/AccordionDetails';
+import Typography from '@mui/material/Typography';
+import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
+import { useState } from 'react';
 
 const initialValues = {
-  name: "",
-  age: ""
+  name: '',
+  age: '',
 };
 
 export default function SimpleAccordion() {
   const [values, setValues] = useState(initialValues);
-  const [data, setData] = useState("");
+  const [data, setData] = useState('');
 
   const handleInputChange = (e) => {
     const { name, value } = e.target;
     setValues({
       ...values,
-      [name]: value
+      [name]: value,
     });
   };
   const handleChange = (e) => {
@@ -34,15 +34,15 @@ export default function SimpleAccordion() {
           id="panel1a-header"
         >
           <Typography>
-            <b>Name and Age</b>
+            <b>Name & Age</b>
           </Typography>
         </AccordionSummary>
         <AccordionDetails>
           <Typography>
-            <form style={{ textAlign: "center" }}>
+            <form style={{ textAlign: 'center' }}>
               Name: <br />
               <input
-                style={{ borderRadius: "5px" }}
+                style={{ borderRadius: '5px' }}
                 value={values.name}
                 onChange={handleInputChange}
                 name="name"
@@ -50,7 +50,7 @@ export default function SimpleAccordion() {
               <br />
               Age: <br />
               <input
-                style={{ borderRadius: "5px" }}
+                style={{ borderRadius: '5px' }}
                 value={values.age}
                 onChange={handleInputChange}
                 name="age"
@@ -70,7 +70,7 @@ export default function SimpleAccordion() {
           </Typography>
         </AccordionSummary>
         <AccordionDetails>
-          <Typography style={{ textAlign: "center" }}>
+          <Typography style={{ textAlign: 'center' }}>
             <select onChange={handleChange}>
               <option value="">Select</option>
               <option value="Mca">MCA</option>
@@ -92,8 +92,8 @@ export default function SimpleAccordion() {
         </AccordionSummary>
         <AccordionDetails>
           <Typography>
-            <Typography style={{ textAlign: "center" }}>
-              <p>Name: {values.name}</p> <p>Age: {values.age}</p>{" "}
+            <Typography style={{ textAlign: 'center' }}>
+              <p>Name: {values.name}</p> <p>Age: {values.age}</p>{' '}
               <p>Qualification: {data}</p>
             </Typography>
           </Typography>
